@@ -21,10 +21,5 @@ node('master')
        sh 'java -jar /home/ubuntu/.jenkins/workspace/DerPipeline/testing.jar'
 	                                
     }
-    stage('ContinuousDelivery')
-    {
-        sh 'scp /home/ubuntu/.jenkins/workspace/DerPipeline/webapp/target/webapp.war ubuntu@172.31.16.146:/var/lib/tomcat9/webapps/prodapp.war'   
-    }
-    
-}
 
+}
